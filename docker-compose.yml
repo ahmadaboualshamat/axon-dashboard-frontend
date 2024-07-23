@@ -3,7 +3,7 @@ version: '3.1'
 services:
   dashboard-frontend-app:
 #    build: ../dashboard-frontend
-    image: ahmadaboualshamat/dashboard-frontend
+    image: ahmadaboualshamat/axon-dashboard-frontend
     container_name: dashboard-frontend-app-container
     ports:
       - "3000:3000"

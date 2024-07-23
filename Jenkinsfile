@@ -12,7 +12,7 @@ pipeline {
         stage('GIT Checkout') {
             steps {
                 // Checkout Project B from version control
-                checkout scmGit(branches: [[name: '*/release/qa']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ahmadaboualshamat/dashboard-frontend']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ahmadaboualshamat/axon-dashboard-frontend']])
             }
         }
 //         stage('Build Node') { // Then step putted inside docker file as another implementation
@@ -26,14 +26,14 @@ pipeline {
         stage('Build Image') {
             steps{ 
                 script{
-                    bat 'docker build -t ahmadaboualshamat/dashboard-frontend .'
+                    bat 'docker build -t ahmadaboualshamat/axon-dashboard-frontend .'
                 }
             }
         }
         stage('Push Image') {
             steps{
                 script{
-                    bat 'docker push ahmadaboualshamat/dashboard-frontend'
+                    bat 'docker push ahmadaboualshamat/axon-dashboard-frontend'
                 }
             }
         }
