@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard-frontend
+spec:
+  selector:
+    matchLabels:
+      app: dashboard-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dashboard-frontend
+    spec:
+      containers:
+        - name: dashboard-frontend
+          image: ahmadaboualshamat/dashboard-frontend
+          imagePullPolicy: IfNotPresent
+#          restartPolicy: always
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-frontend-service
+spec:
+  selector:
+    app: dashboard-frontend
+  ports:
+    - protocol: "TCP"
+      port: 3000 # port of service inside the cluster
+      targetPort: 3000 # port exposed by this service
+  type: NodePort # type of service

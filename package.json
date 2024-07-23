@@ -1,0 +1,42 @@
+{
+  "name": "react-redux-hooks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^1.7.2",
+    "primereact": "^10.6.6",
+    "react": "^18.0.0",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18.0.0",
+    "react-redux": "^7.1.1",
+    "react-scripts": "3.1.2",
+    "redux": "^5.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0",
+    "styled-components": "^6.1.11",
+    "uuid": "3.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "./"
+}
